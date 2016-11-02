@@ -8,7 +8,7 @@ Tokens, or JWT. In order to start working with JSON Web Tokens, you can either u
 .encode() and .decode() methods provided by the core gateway:
 
 ```cfc
-var jwt = new lib.JsonWebTokens();
+var jwt = application.cfpm.require('lib.JsonWebTokens');
 
 var jwtToken = jwt.encode( somePayload, "HS256", "secretKey" );
 var payload = jwt.decode( jwtToken, "HS256", "secretKey" );
@@ -19,7 +19,7 @@ a particular application, it can be more efficient to instantiate and cache a JS
 Token client:
 
 ```cfc
-var client = new lib.JsonWebTokens().createClient( "HS256", "secretKey" );
+var client = application.cfpm.require('lib.JsonWebTokens').createClient( "HS256", "secretKey" );
 
 var jwtToken = client.encode( somePayload );
 var payload = client.decode( jwtToken );
@@ -46,13 +46,13 @@ using RSA-based methods or creating an RSA-based client:
 
 ```cfc
 // Create an Hmac-based client.
-var client = new lib.JsonWebTokens().createClient( "HS256", "secret" );
+var client = application.cfpm.require('lib.JsonWebTokens').createClient( "HS256", "secret" );
 
 // Create an RSA-based client.
-var client = new lib.JsonWebTokens().createClient( "RS256", "publicKey", "privateKey" );
+var client = application.cfpm.require('lib.JsonWebTokens').createClient( "RS256", "publicKey", "privateKey" );
 
 // Or, just use the .encode() and .decode() methods directly:
-var jwt = new lib.JsonWebTokens();
+var jwt = application.cfpm.require('lib.JsonWebTokens');
 
 // Encode a payload:
 jwt.encode( somePayload, "HS256", "secretKey" );
