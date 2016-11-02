@@ -1,0 +1,12 @@
+
+{
+    "name" : "jwt",
+    "version" : "master",
+    "repository" : "https://github.com/Prefinem/jwtCF",
+
+    "author": "Ben Nadel",
+    "homepage": "http://www.bennadel.com/",
+    "description" : "This is a small ColdFusion module to facilitate the encoding and decoding of JSON Web Tokens, or JWT",
+    "keywords" : "JWT, JSON Web Tokens",
+    "license" : "MIT"
+}
