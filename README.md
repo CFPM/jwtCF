@@ -4,6 +4,14 @@ by [Ben Nadel][1] (on [Google+][2])
 
 ##Ported to CFPM
 
+##Installation
+
+This is a port / fork from Ben Nadel's original library.  It was created to be hosted on CFPM and thus can be installed using CFPM
+
+	cfpm add jwt
+
+##About
+
 This is a small ColdFusion module to facilitate the encoding and decoding of JSON Web
 Tokens, or JWT. In order to start working with JSON Web Tokens, you can either use the
 .encode() and .decode() methods provided by the core gateway:
